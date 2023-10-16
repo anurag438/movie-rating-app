@@ -7,16 +7,19 @@ import Footer from './components/Footer/Footer'
 import PageNotFound from './components/PageNotFound/PageNotFound'
 function App() {
   return (
-    <div className="App">
-      <Header/>
+    <div className="App"> 
      <BrowserRouter>
-     <Routes>
-      <Route path='/' exact Component={Home}/>
-      <Route path='/movie/:imdbID' Component={MovieDetail}/>
-      <Route path='*' Component={PageNotFound}/>
-     </Routes>
-     </BrowserRouter>
+     <Header/>
+     <div className="container">
+      <Routes>
+        <Route path='/' exact Component={Home}/>
+        <Route path='/movie/:imdbID' Component={MovieDetail}/>
+        <Route path='*' Component={PageNotFound}/>
+      </Routes>
+     </div>
      <Footer/>
+     </BrowserRouter>
+  
     </div>
   );
 }
